@@ -1,0 +1,26 @@
+<div *ngFor="let product of products">
+  <mat-card>
+    <mat-card-title>Product: {{ product.name }}</mat-card-title>
+    <mat-card-content>
+      <p>Price: ${{ product.price }}</p>
+      <p>Status: 
+        <span [ngClass]="product.available ? 'in-stock' : 'out-of-stock'">
+          {{ product.available ? 'In Stock' : 'Out of Stock' }}
+        </span>
+      </p>
+
+      <mat-form-field>
+        <mat-label>New Price</mat-label>
+        <input matInput #priceInput type="number">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="updatePrice(product.id, priceInput.value)">
+        Update Price
+      </button>
+      <button mat-raised-button color="accent" (click)="updateOrder(product.id)">
+        Update Order
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
