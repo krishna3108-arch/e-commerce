@@ -1,0 +1,27 @@
+mat-card {
+    max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff !important; /* Light background */
+  color: #000000 !important; /* Dark text for visibility */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  }
+  mat-form-field {
+    width: 100%;
+  }
+  button {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .in-stock {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .out-of-stock {
+    color: red;
+    font-weight: bold;
+  }
+  
